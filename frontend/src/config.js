@@ -1,6 +1,6 @@
 
 const config = {
-  backendURL: "http://localhost:3000",
+  backendURL: "https://quiz-master-app-2.onrender.com",
 };
 
 export default config;
