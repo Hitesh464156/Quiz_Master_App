@@ -14,7 +14,7 @@ const db_url = process.env.DB_URL;
 const frontend_url = process.env.FRONTEND_URL ;
 
 connect(db_url);
-const allowedOrigins = ["https://quiz-master-app-2.onrender.com/", "https://quiz-master-app-6.onrender.com/auth"];
+const allowedOrigins = ["https://quiz-master-app-12.onrender.com/", "https://quiz-master-app-13.onrender.com/auth"];
 
 app.use(
   cors({
