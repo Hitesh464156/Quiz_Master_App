@@ -42,7 +42,7 @@ const Login = () => {
       const { data } = await axios.post(
         `${config.backendURL}/api/v1/user/login`,
         { email, password },
-        config
+        axiosConfig
       );
       toast.success("Login successful");
       setEmail("");
@@ -108,9 +108,7 @@ const Login = () => {
           <a
             href="/forgot-password"
             className="text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            Forgot password?
-          </a>
+          ></a>
         </div>
       </div>
       <div className="flex justify-center">

@@ -45,8 +45,8 @@ function App() {
           <Route path="quiz-leaderboard/:id" element={<QuizLeaderboard />} />
           <Route path="auth" element={<Auth />} />
           <Route path="verify-email/:id/:token" element={<VerifyEmail />} />
-          <Route path="forgot-password" element={<ForgotPassword />} />
-          <Route path="reset-password/:id/:token" element={<ResetPassword />} />
+          {/* <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="reset-password/:id/:token" element={<ResetPassword />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>
       </ContextProvider>

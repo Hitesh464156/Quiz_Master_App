@@ -61,7 +61,7 @@ class UserController {
             const text = "Reset your password"
             const html = `<h3>Click <a href=${link}>here</a> to reset your password</h3>
             <p>This link is valid for 10 minutes</p>`;
-            sendMail(from, to, subject, text, html);
+            await sendMail(from, to, subject, text, html);
             return res.status(200).send({ success: true, message: "Reset Password link is sent to your email" })
         }   
         catch (error) {

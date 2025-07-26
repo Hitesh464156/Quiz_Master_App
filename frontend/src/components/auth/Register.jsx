@@ -52,8 +52,6 @@ const Register = () => {
     }
 
     try {
-      console.log("URL:", import.meta.env.VITE_BACKEND_URL);
-
       const { data } = await axios.post(
         `${config.backendURL}/api/v1/user/register`,
         { name, email, password, confirmPassword },
