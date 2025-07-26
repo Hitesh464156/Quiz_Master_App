@@ -14,7 +14,7 @@ const db_url = process.env.DB_URL;
 const frontend_url = process.env.FRONTEND_URL ;
 
 connect(db_url);
-const allowedOrigins = ["https://quiz-master-app-12.onrender.com/", "https://quiz-master-app-13.onrender.com/auth"];
+const allowedOrigins = ["https://quiz-master-app-14.onrender.com/", "https://quiz-master-app-15.onrender.com/auth"];
 
 app.use(
   cors({
@@ -33,18 +33,18 @@ app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/quiz', quizRoutes);
 
 // --------------------Deployment-------------------------
-const __dirname1 = path.resolve();
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname1,'../frontend/dist')))
-    app.get('*',(req, res)=>{
-        res.sendFile(path.resolve(__dirname1, '../frontend', 'dist', 'index.html'))
-    });
-}
-else{
-    app.get('*',(req, res)=>{
-        res.send("API is running successfully.")
-    });
-}
+// const __dirname1 = path.resolve();
+// if(process.env.NODE_ENV === 'production'){
+//     app.use(express.static(path.join(__dirname1,'../frontend/dist')))
+//     app.get('*',(req, res)=>{
+//         res.sendFile(path.resolve(__dirname1, '../frontend', 'dist', 'index.html'))
+//     });
+// }
+// else{
+//     app.get('*',(req, res)=>{
+//         res.send("API is running successfully.")
+//     });
+// }
 // --------------------Deployment-------------------------
 
 app.use(notFound)
